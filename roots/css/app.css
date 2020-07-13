@@ -1,0 +1,521 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "info-correspondence-web-pro", sans-serif;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #804c2c;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 30px;
+  font-style: italic;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+}
+
+.section-title {
+  background-image: url("../images/logo.png");
+  min-height: 150px;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.section-title img {
+  width: 100%;
+}
+
+.section-hook {
+  min-height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: #FFF;
+}
+
+.section-hook .hook {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+  background-image: url("../images/paper-bag.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-hook .hook h1 {
+  color: rgba(128, 76, 44, 0.8);
+  text-align: center;
+}
+
+.section-hook .video {
+  width: 50%;
+}
+
+.section-hook .video .overlay {
+  position: absolute;
+  width: 50%;
+  min-height: 635px;
+  background-color: rgba(128, 76, 44, 0.7);
+  right: 0;
+}
+
+.section-hook .video video {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 750px) {
+  .section-hook {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-hook .hook,
+  .section-hook .video,
+  .section-hook .overlay {
+    width: 100% !important;
+    left: 0;
+  }
+}
+
+.section-description {
+  color: #777;
+  background-color: white;
+  text-align: center;
+  padding: 120px;
+  z-index: 9;
+  position: relative;
+  background-color: #FFF;
+}
+
+@media only screen and (max-width: 750px) {
+  .section-description {
+    padding: 50px;
+  }
+  .section-description h2 {
+    font-size: 30px;
+  }
+}
+
+.section-problem,
+.section-solution {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFF;
+}
+
+.section-problem .flex,
+.section-solution .flex {
+  border-left: 4px solid rgba(128, 76, 44, 0.4);
+  border-bottom: 4px solid rgba(128, 76, 44, 0.4);
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin-right: 10px;
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+}
+
+.section-problem .image,
+.section-solution .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 49.4%;
+  min-height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 5px;
+}
+
+.section-problem .image img,
+.section-solution .image img {
+  min-height: 100%;
+  max-height: 627px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 750px) {
+  .section-problem,
+  .section-solution {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-problem .flex,
+  .section-problem .image,
+  .section-solution .flex,
+  .section-solution .image {
+    width: 100%;
+  }
+}
+
+.section-solution {
+  padding-top: 10px;
+}
+
+.section-solution .image {
+  padding-right: 0 !important;
+}
+
+.section-solution .flex {
+  margin-left: 0 !important;
+  border-left: none !important;
+  border-right: 4px solid rgba(128, 76, 44, 0.4);
+}
+
+@media only screen and (max-width: 750px) {
+  .section-solution .flex {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .section-solution .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.parallax2 {
+  background-image: url("../images/paper-bag2.jpg");
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-tools {
+  background-color: #FFF;
+  padding-top: 10px;
+}
+
+.section-tools h3 {
+  margin: 0;
+  padding: 50px;
+  text-align: center;
+  background-color: rgba(128, 76, 44, 0.4);
+  color: #FFF;
+}
+
+.section-tools .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.section-tools .tools ul,
+.section-tools .tools li {
+  font-family: "info-correspondence-web-pro", sans-serif;
+  line-height: 36px;
+}
+
+.section-tools .tools ul {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 0;
+}
+
+.section-tools .tools li {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 750px) {
+  .section-tools .tools {
+    width: 80%;
+  }
+}
+
+.section-process {
+  background-color: #FFF;
+}
+
+.section-process .article h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.section-process .moodboard h3 {
+  padding: 2.5% 0 0;
+}
+
+.section-process .moodboard img {
+  max-width: 100%;
+}
+
+.section-process .type h3 {
+  padding-bottom: 2%;
+}
+
+.section-process .type .flex {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 160px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-process .type .flex h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.section-process .type .flex .info {
+  font-family: "info-correspondence-web-pro", sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+.section-process .type .flex .info.italic {
+  font-style: italic;
+}
+
+.section-process .type .flex .info.bold {
+  font-weight: 700;
+}
+
+.section-process .type .flex p {
+  font-family: "motion", sans-serif;
+  font-size: 45px;
+  margin: 0;
+  text-align: center;
+}
+
+.section-process .colors h3 {
+  position: relative;
+  top: 100px;
+  color: #fff;
+}
+
+.section-process .colors .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-process .colors .flex .color {
+  width: 25%;
+  height: 150px;
+}
+
+.section-process .colors .flex .color.ten {
+  background-color: rgba(128, 76, 44, 0.1);
+}
+
+.section-process .colors .flex .color.twenty-five {
+  background-color: rgba(128, 76, 44, 0.25);
+}
+
+.section-process .colors .flex .color.fifty {
+  background-color: rgba(128, 76, 44, 0.5);
+}
+
+.section-process .colors .flex .color.hundred {
+  background-color: #804c2c;
+}
+
+.section-process .colors .flex .color.ten-b {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.section-process .colors .flex .color.twenty-five-b {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.section-process .colors .flex .color.fifty-b {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-process .colors .flex .color.hundred-b {
+  background-color: #000;
+}
+
+.section-process .buttons {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section-process .buttons h3 {
+  padding: 5% 0;
+}
+
+.section-process .buttons .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-process .buttons .flex .btn {
+  width: 25%;
+  height: 50px;
+  border: 2px solid #804c2c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-process .buttons .flex .btn h5 {
+  margin: 0;
+}
+
+.section-process .buttons .flex .btn.hover {
+  background-color: rgba(128, 76, 44, 0.25);
+}
+
+.section-process .buttons .flex .btn.hover:hover {
+  background-color: rgba(128, 76, 44, 0.5);
+}
+
+.section-process .buttons .flex .underline {
+  border-bottom: 2px solid #804c2c;
+}
+
+.section-process .buttons .flex .underline h5 {
+  margin: 0;
+}
+
+.section-process .buttons .flex .hover h5 {
+  margin: 0;
+}
+
+.section-process .buttons .flex .hover:hover {
+  border-bottom: 2px solid rgba(128, 76, 44, 0.5);
+}
+
+@media only screen and (max-width: 750px) {
+  .section-process .type h3 {
+    margin: 5% 0;
+  }
+  .section-process .type .flex {
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-process .colors h3 {
+    top: 220px;
+  }
+  .section-process .colors .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-process .colors .flex .color {
+    width: 100%;
+    height: 50px;
+  }
+  .section-process .buttons .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-process .buttons .flex .btn {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+  .section-process .buttons .flex .btn h5 {
+    font-size: initial;
+  }
+  .section-process .buttons .flex .underline {
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=app.css.map */

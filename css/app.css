@@ -51,6 +51,19 @@ p {
   letter-spacing: 1.2px;
 }
 
+.section-hook,
+.section-description,
+.section-problem,
+.section-solution,
+.section-users,
+.section-research,
+.section-tools,
+.section-process,
+.section-deliverables,
+.section-summary {
+  background-color: #FFF;
+}
+
 .section-title {
   background-image: url("../images/logo.png");
   min-height: 150px;
@@ -75,23 +88,18 @@ p {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  background-color: #FFF;
 }
 
 .section-hook .hook {
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px;
-  background-image: url("../images/paper-bag.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,13 +111,15 @@ p {
 }
 
 .section-hook .video {
-  width: 50%;
+  width: 100%;
+  height: 600px;
+  position: relative;
 }
 
 .section-hook .video .overlay {
   position: absolute;
-  width: 50%;
-  min-height: 635px;
+  width: 100%;
+  min-height: 600px;
   background-color: rgba(128, 76, 44, 0.7);
   right: 0;
 }
@@ -117,6 +127,10 @@ p {
 .section-hook .video video {
   display: block;
   width: 100%;
+  min-height: 600px;
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media only screen and (max-width: 750px) {
@@ -132,6 +146,19 @@ p {
     width: 100% !important;
     left: 0;
   }
+  .section-hook #hook {
+    top: 40%;
+  }
+}
+
+#hook {
+  position: absolute;
+  top: 45%;
+  color: #FFF;
+  text-shadow: 2px 2px 2px #804c2c;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
 }
 
 .section-description {
@@ -141,7 +168,6 @@ p {
   padding: 120px;
   z-index: 9;
   position: relative;
-  background-color: #FFF;
 }
 
 @media only screen and (max-width: 750px) {
@@ -158,7 +184,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #FFF;
 }
 
 .section-problem .flex,
@@ -249,7 +274,6 @@ p {
 }
 
 .section-users {
-  background-color: #FFF;
   text-align: center;
 }
 
@@ -288,6 +312,20 @@ p {
 .section-users .grid .user {
   background-color: rgba(128, 76, 44, 0.1);
   padding: 20px 40px;
+  text-align: left;
+}
+
+.section-users .grid .user h5 {
+  text-align: center;
+  margin: 0;
+}
+
+.section-users .summary {
+  padding-bottom: 30px;
+}
+
+.section-users .summary p {
+  margin: 0;
 }
 
 @media only screen and (max-width: 750px) {
@@ -306,7 +344,6 @@ p {
 }
 
 .section-research {
-  background-color: #FFF;
   text-align: center;
 }
 
@@ -316,7 +353,6 @@ p {
 }
 
 .section-tools {
-  background-color: #FFF;
   padding-top: 10px;
 }
 
@@ -363,7 +399,7 @@ p {
 }
 
 .section-process {
-  background-color: #FFF;
+  padding-bottom: 50px;
 }
 
 .section-process .article h3 {
@@ -384,8 +420,15 @@ p {
 }
 
 .section-process .type .flex {
-  width: 80%;
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-process .type .flex .font {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,44 +436,55 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 160px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 0 15px;
 }
 
-.section-process .type .flex h4 {
+.section-process .type .flex .font h4 {
   font-size: 20px;
   text-align: center;
+  margin: 5px 0;
 }
 
-.section-process .type .flex .info {
+.section-process .type .flex .font .text {
+  margin: 5px 0;
+  font-size: 11px;
+  font-family: "info-correspondence-web-pro", sans-serif;
+}
+
+.section-process .type .flex .font .info {
   font-family: "info-correspondence-web-pro", sans-serif;
   font-weight: 100;
   text-align: center;
 }
 
-.section-process .type .flex .info.italic {
+.section-process .type .flex .font .info.italic {
   font-style: italic;
 }
 
-.section-process .type .flex .info.bold {
+.section-process .type .flex .font .info.bold {
   font-weight: 700;
 }
 
-.section-process .type .flex p {
+.section-process .type .flex .font p {
   font-family: "motion", sans-serif;
   font-size: 45px;
   margin: 0;
   text-align: center;
 }
 
+.section-process .colors {
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
 .section-process .colors h3 {
   position: relative;
   top: 100px;
   color: #fff;
+}
+
+.section-process .colors p {
+  text-align: center;
 }
 
 .section-process .colors .flex {
@@ -481,8 +535,8 @@ p {
   margin: 0 auto;
 }
 
-.section-process .buttons h3 {
-  padding: 5% 0;
+.section-process .buttons .section-header {
+  padding: 5% 0 2%;
 }
 
 .section-process .buttons .flex {
@@ -545,10 +599,13 @@ p {
     margin: 5% 0;
   }
   .section-process .type .flex {
-    height: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-process .type .flex .font {
+    margin-bottom: 50px;
   }
   .section-process .colors h3 {
     top: 220px;
@@ -579,5 +636,89 @@ p {
   .section-process .buttons .flex .underline {
     margin-bottom: 20px;
   }
+}
+
+.section-deliverables {
+  padding: 50px 0;
+  text-align: center;
+  border-top: 3px solid #804c2c;
+  border-bottom: 3px solid #804c2c;
+}
+
+.section-deliverables .section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.section-deliverables .section-header .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-deliverables .section-header .flex h3,
+.section-deliverables .section-header .flex h4 {
+  margin: 0;
+}
+
+.section-deliverables .section-header .flex h4 {
+  padding-top: 30px;
+}
+
+.section-deliverables .section-header .flex h4 a {
+  font-family: "motion", sans-serif;
+  font-style: initial;
+  color: #804c2c;
+  text-decoration: none;
+}
+
+.section-deliverables .section-header .flex .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-deliverables .section-header .flex a {
+  color: #804c2c;
+  text-decoration: none;
+}
+
+.section-deliverables a {
+  color: #804c2c;
+}
+
+@media only screen and (max-width: 750px) {
+  .section-deliverables .section-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-deliverables .section-header .flex {
+    padding: 50px;
+  }
+}
+
+.section-summary {
+  background-color: rgba(128, 76, 44, 0.8);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #FFF;
+}
+
+.section-summary h3 {
+  margin: 0;
 }
 /*# sourceMappingURL=app.css.map */

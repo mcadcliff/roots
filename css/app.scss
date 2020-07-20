@@ -78,6 +78,19 @@ p {
   }
 }
 
+.section-hook,
+.section-description,
+.section-problem,
+.section-solution,
+.section-users,
+.section-research,
+.section-tools,
+.section-process,
+.section-deliverables,
+.section-summary {
+  background-color: #FFF;
+}
+
 .section-title {
   background-image: url('../images/logo.png');
   min-height: 150px;
@@ -99,15 +112,10 @@ p {
   min-height: 40%;
   display: flex;
   position: relative;
-  background-color: #FFF;
   .hook {
-    width: 50%;
     display: flex;
-    min-height: 100%;
     align-items: center;
     justify-content: center;
-    padding: 50px;
-    background-image: url('../images/paper-bag.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -117,17 +125,22 @@ p {
     }
   }
   .video {
-    width: 50%;
+    width: 100%;
+    height: 600px;
+    position: relative;
     .overlay {
       position: absolute;
-      width: 50%;
-      min-height: 635px;
+      width: 100%;
+      min-height: 600px;
       background-color: rgba(128, 76, 44, 0.7);
       right: 0;
     }
     video {
       display: block;
       width: 100%;
+      min-height: 600px;
+      max-height: 600px;
+      object-fit: cover;
     }
   }
   @media only screen and (max-width: 750px) {
@@ -138,7 +151,20 @@ p {
       width: 100% !important;
       left: 0;
     }
+    #hook {
+      top: 40%;
+    }
   }
+}
+
+#hook {
+  position: absolute;
+  top: 45%;
+  color: #FFF;
+  text-shadow: 2px 2px 2px #804c2c;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
 }
 
 .section-description {
@@ -148,7 +174,6 @@ p {
   padding: 120px;
   z-index: 9;
   position: relative;
-  background-color: #FFF;
   @media only screen and (max-width: 750px) {
     padding: 50px;
     h2 {
@@ -161,7 +186,6 @@ p {
 .section-problem,
 .section-solution {
   display: flex;
-  background-color: #FFF;
   .flex {
     border-left: 4px solid rgba(128, 76, 44, 0.4);
     border-bottom: 4px solid rgba(128, 76, 44, 0.4);
@@ -181,7 +205,6 @@ p {
     min-height: 100%;
     flex-direction: column;
     padding-right: 5px;
-    // position: relative;
     img {
       min-height: 100%;
       max-height: 627px;
@@ -217,18 +240,8 @@ p {
   }
 }
 
-// .parallax2 {
-//     background-image: url("../images/paper-bag2.jpg");
-//     height: 100vh;
-//     background-attachment: fixed;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover; 
-//   }
-
 
 .section-users {
-  background-color: #FFF;
   text-align: center;
   h3 {
     margin: 0;
@@ -257,6 +270,17 @@ p {
     .user {
       background-color: rgba(128, 76, 44, 0.1);
       padding: 20px 40px;
+      text-align: left;
+      h5 {
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+  .summary {
+    padding-bottom: 30px;
+    p {
+      margin: 0;
     }
   }
   @media only screen and (max-width: 750px) {
@@ -272,7 +296,6 @@ p {
 
 
 .section-research {
-  background-color: #FFF;
   text-align: center;
   h3 {
     margin: 0;
@@ -281,7 +304,6 @@ p {
 }
 
 .section-tools {
-  background-color: #FFF;
   padding-top: 10px;
   h3 {
     margin: 0;
@@ -319,7 +341,7 @@ p {
 
 
 .section-process {
-  background-color: #FFF;
+  padding-bottom: 50px;
   .article h3 {
     margin: 0;
     text-align: center;
@@ -337,43 +359,52 @@ p {
       padding-bottom: 2%;
     }
     .flex {
-      width: 80%;
-      margin: 0 auto;
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      height: 160px;
-      justify-content: center;
-      h4 {
-        font-size: 20px;
-        text-align: center;
-      }
-      .info {
-        font-family: $pro-bold;
-        font-weight: 100;
-        text-align: center;
-        &.italic {
-          font-style: italic;
+      justify-content: space-between;
+      .font {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        h4 {
+          font-size: 20px;
+          text-align: center;
+          margin: 5px 0;
         }
-        &.bold {
-          font-weight: 700;
+        .text {
+          margin: 5px 0;
+          font-size: 11px;
+          font-family: $pro-bold;
         }
-      }
-      p {
-        font-family: $motion;
-        font-size: 45px;
-        margin: 0;
-        text-align: center;
+        .info {
+          font-family: $pro-bold;
+          font-weight: 100;
+          text-align: center;
+          &.italic {
+            font-style: italic;
+          }
+          &.bold {
+            font-weight: 700;
+          }
+        }
+        p {
+          font-family: $motion;
+          font-size: 45px;
+          margin: 0;
+          text-align: center;
+        }
       }
     }
   }
   .colors {
+    padding-top: 5%;
+    padding-bottom: 2%;
     h3 {
       position: relative;
       top: 100px;
       color: #fff;
-      // font-size: 100px;
-      // text-transform: uppercase;
+    }
+    p {
+      text-align: center;
     }
     .flex {
       display: flex;
@@ -410,8 +441,8 @@ p {
   .buttons {
     width: 90%;
     margin: 0 auto;
-    h3 {
-      padding: 5% 0;
+    .section-header {
+      padding: 5% 0 2%;
     }
     .flex {
       display: flex;
@@ -456,8 +487,10 @@ p {
         margin: 5% 0;
       }
       .flex {
-        height: auto;
-        align-items: center;
+        flex-direction: column;
+        .font {
+          margin-bottom: 50px;
+        }
       }
     }
     .colors {
@@ -487,5 +520,63 @@ p {
         }
       }
     }
+  }
+}
+
+.section-deliverables {
+  padding: 50px 0;
+  text-align: center;
+  border-top: 3px solid #804c2c;
+  border-bottom: 3px solid #804c2c;
+  .section-header {
+    display: flex;
+    justify-content: space-evenly;
+    .flex {
+      display: flex;
+      flex-direction: column;
+      h3,
+      h4 {
+        margin: 0;
+      }
+      h4 {
+        padding-top: 30px;
+        a {
+          font-family: $motion;
+          font-style: initial;
+          color: #804c2c;
+          text-decoration: none;
+        }
+      }
+      .items {
+        display: flex;
+        justify-content: space-between;
+      }
+      a {
+        color: #804c2c;
+        text-decoration: none;
+      }
+    }
+  }
+  a {
+    color: #804c2c;
+  }
+  @media only screen and (max-width: 750px) {
+    .section-header {
+      flex-direction: column;
+      .flex {
+        padding: 50px;
+      }
+    }
+  }
+}
+
+.section-summary {
+  background-color: rgba(128, 76, 44, 0.8);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #FFF;
+  h3 {
+    margin: 0;
   }
 }

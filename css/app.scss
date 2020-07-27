@@ -80,6 +80,7 @@ p {
 
 .section-hook,
 .section-description,
+.section-mockup,
 .section-problem,
 .section-solution,
 .section-users,
@@ -167,6 +168,14 @@ p {
   font-size: 25px;
 }
 
+.section-mockup {
+  padding-top: 10%;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
 .section-description {
   color: #777;
   background-color: white;
@@ -207,8 +216,18 @@ p {
     padding-right: 5px;
     img {
       min-height: 100%;
-      max-height: 627px;
+      max-height: 500px;
       object-fit: cover;
+    }
+    &.print {
+      flex-direction: row;
+      img {
+        width: 50%;
+        padding-right: 10px;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
     }
   }
   @media only screen and (max-width: 750px) {
@@ -279,6 +298,10 @@ p {
   }
   .summary {
     padding-bottom: 30px;
+    background-color: rgba(128, 76, 44, 0.1);
+    h4 {
+      padding-top: 30px;
+    }
     p {
       margin: 0;
     }
@@ -309,14 +332,15 @@ p {
     margin: 0;
     padding: 50px;
     text-align: center;
-    background-color: rgba(128, 76, 44, 0.4);
     color: #FFF;
+    background-color: rgba(128, 76, 44, 0.4);
   }
   .tools {
     display: flex;
     justify-content: space-between;
     width: 40%;
     margin: 0 auto;
+    padding-bottom: 30px;
     ul,
     li {
       font-family: $pro-bold;
@@ -347,11 +371,15 @@ p {
     text-align: center;
   }
   .moodboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h3 {
       padding: 2.5% 0 0;  
     }
     img {
       max-width: 100%;
+      width: 75%;
     }
   }
   .type {
@@ -481,7 +509,24 @@ p {
       }
     }
   }
+  .wireframes {
+    padding-top: 10%;
+    .images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px;
+      padding: 30px 50px;
+      img {
+        width: 100%;
+      }
+    }
+  }
   @media only screen and (max-width: 750px) {
+    .moodboard {
+      img {
+        width: 100%;
+      }
+    }
     .type {
       h3 {
         margin: 5% 0;
@@ -518,6 +563,14 @@ p {
         .underline {
           margin-bottom: 20px;
         }
+      }
+    }
+    .wireframes {
+      .images {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }
